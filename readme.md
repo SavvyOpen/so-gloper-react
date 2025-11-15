@@ -1,6 +1,8 @@
 # 🧩 SoGloper 0.8.0-alpha (so-gloper-react) — Library
 
 **SoGloper** is a dataflow engine and global state management library that provides **minimal boilerplate**, **flexible dual operation modes**, **clean namespacing control**, **optional namespace-integrated persistence** and much more.
+
+See the demo live: [Link](https://savvyopen.github.io/so-gloper-react/)
 ---
 
 ## 🚀 Key Features
@@ -32,6 +34,16 @@
 * **Auto Immutable Update** — Support Object and Array within React component and it is designed to be off in programmatic API for typical dataflow
 
 * **React 18+ Ready** — Fully supports concurrent rendering and transitions using `useSyncExternalStore`.
+
+---
+
+## Installation
+
+For the latest release:
+
+```bash
+npm install so-gloper-react
+```
 
 ---
 
@@ -142,7 +154,7 @@ SoGloper.configure({consoleDebug: true});
 
 ---
 
-## 📦 Demo App Overview
+## 📦 Demo App Overview (See the demo live: [Link](https://savvyopen.github.io/so-gloper-react/))
 
 * **Intro View** – Introduces SoGloper syntaxes and usage.
 * **Data View** – Fetch live crypto prices, add comments, state persisted with `useGloper()`.
