@@ -2,7 +2,7 @@
 
 **SoGloper** is a lightweight, React-first global state management library that delivers **minimal boilerplate**, **flexible dual operation modes**, **clean namespacing control**, **optional namespace-integrated persistence** and much more.
 
-See Demo <a href="(https://savvyopen.github.io/so-gloper-react/))" target="_blank">Link</a>
+See Demo [link](https://savvyopen.github.io/so-gloper-react/)
 ---
 
 ## 🚀 Key Features
@@ -140,7 +140,7 @@ SoGloper.configure({consoleDebug: true});
 
 ---
 
-## 📦 Demo App Overview (See Demo <a href="(https://savvyopen.github.io/so-gloper-react/))" target="_blank">Link</a>)
+## 📦 Demo App Overview (See Demo [link](https://savvyopen.github.io/so-gloper-react/))
 
 * **Intro View** – Introduces SoGloper syntaxes and usage.
 * **Data View** – Fetch live crypto prices, add comments, state persisted with `useGloper()`.
@@ -165,6 +165,7 @@ SoGloper.configure({consoleDebug: true});
 
 
 ---
+
 
 
 
