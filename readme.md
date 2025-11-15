@@ -43,6 +43,7 @@ For the latest release:
 
 ```bash
 npm install so-gloper-react
+```
 
 ---
 
