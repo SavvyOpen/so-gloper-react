@@ -1,4 +1,4 @@
-# 🧩 SoGloper (so-gloper-react) — Reactive Global State for React
+# 🧩 SoGloper Library (so-gloper-react) — Reactive Global State for React
 
 **SoGloper** is a lightweight, React-first global state management library that delivers **minimal boilerplate**, **flexible dual operation modes**, **clean namespacing control**, **optional namespace-integrated persistence** and much more.
 
@@ -161,5 +161,6 @@ SoGloper.configure({consoleDebug: true});
 * ✅ **Alpha** — Core API stable, demo fully functional
 * 🧪 **Exploration** — Developer-friendly debugging tools
 * 🔬 **Future** — Full Control Mode with symbolic references, IDE ergonomics, and advanced state flows
+
 
 ---
