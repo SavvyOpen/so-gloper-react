@@ -1,0 +1,59 @@
+/*
+	Copyright (c) 2025 Chung Lim Lee and Savvy Open
+	All rights reserved.
+*/
+
+
+
+
+
+#root {
+
+	margin: auto;
+	padding: 10px;
+	text-align: center;
+}
+
+button {
+
+	background-color: #f0f0f0;
+	margin: 10px;
+}
+
+textarea {
+
+	width: 300px;
+	height: 80px;
+	border: none;
+	border-radius: 5px;
+	background-color: #f8f8f8;
+	box-shadow: 0px 0px 8px grey;
+	margin: 10px;
+	resize: none;
+}
+
+.demo-message {
+
+	padding-bottom: 10px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.custom-div {
+
+	border-radius: 5px;
+	padding: 10px;
+	background-color: #f8f8f8;
+	box-shadow: 0px 0px 8px grey;	
+}
+
+em {
+
+	color: red;
+	animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% {opacity: 1;}
+  25%, 75% {opacity: 0.38;}
+}
