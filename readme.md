@@ -108,7 +108,7 @@ export const cryptoStore = {
 ```ts
 // main.tsx
 
-import 'cryptoStore' from './cryptoStore.ts';
+import { cryptoStore } from './cryptoStore.ts';
 ```
 
 * Consume state anywhere without worrying about initialization order:
