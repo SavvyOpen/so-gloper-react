@@ -1,7 +1,8 @@
-# 🧩 SoGloper Library (so-gloper-react) — Reactive Global State for React
+# 🧩 SoGloper 0.8.0-alpha (so-gloper-react) — Library
 
-**SoGloper** is a lightweight, React-first global state management library that delivers **minimal boilerplate**, **flexible dual operation modes**, **clean namespacing control**, **optional namespace-integrated persistence** and much more.
+**SoGloper** is a dataflow engine and global state management library that provides **minimal boilerplate**, **flexible dual operation modes**, **clean namespacing control**, **optional namespace-integrated persistence** and much more.
 
+See the demo live: [Link](https://savvyopen.github.io/so-gloper-react/)
 ---
 
 ## 🚀 Key Features
@@ -22,13 +23,27 @@
 
 * **Programmatic API** — Useful for programmatic controls and debugging: `get()`, `set()`, `list()`, `reset()`, `remove()`.
 
-  * Dynamic state creations using `createGloper` to prepared for use in component and/or in code.
+  * Dynamic state creations using `createGloper` to prepare for use in component and/or in code.
   
-* **Built-in and Namespace-integrated Persistence** — Supports both IndexedDB (async) and type-enhanced LocalStorage (sync) out-of-the-box.
-* **Lazy Load State** — States assigned with Async/Sync Function are automatically defer load until the first use (ideal for heavy instructions).
-* **Auto Immutable Update** — support Object and Array within React component and it is designed to be off in programmatic API for typical dataflow
+* **Built-in and Namespace-integrated Persistence** — Supports both IndexedDB (async) and type-preserving LocalStorage (sync) out-of-the-box.
+
+* **Lazy Load for Base State** — Base states assigned with Async/Sync functions are lazily loaded on first use (ideal for heavy instructions).
+
+* **Multi-level get and set** (upcoming) - will support derived states and other advanced patterns.
+
+* **Auto Immutable Update** — Support Object and Array within React component and it is designed to be off in programmatic API for typical dataflow
 
 * **React 18+ Ready** — Fully supports concurrent rendering and transitions using `useSyncExternalStore`.
+
+---
+
+## Installation
+
+For the latest release:
+
+```bash
+npm install so-gloper-react
+```
 
 ---
 
@@ -93,7 +108,7 @@ export const cryptoStore = {
 ```ts
 // main.tsx
 
-import './cryptoStore.ts';
+import 'cryptoStore' from './cryptoStore.ts';
 ```
 
 * Consume state anywhere without worrying about initialization order:
@@ -139,7 +154,7 @@ SoGloper.configure({consoleDebug: true});
 
 ---
 
-## 📦 Demo App Overview
+## 📦 Demo App Overview (See the demo live: [Link](https://savvyopen.github.io/so-gloper-react/))
 
 * **Intro View** – Introduces SoGloper syntaxes and usage.
 * **Data View** – Fetch live crypto prices, add comments, state persisted with `useGloper()`.
@@ -161,6 +176,5 @@ SoGloper.configure({consoleDebug: true});
 * ✅ **Alpha** — Core API stable, demo fully functional
 * 🧪 **Exploration** — Developer-friendly debugging tools
 * 🔬 **Future** — Full Control Mode with symbolic references, IDE ergonomics, and advanced state flows
-
 
 ---
