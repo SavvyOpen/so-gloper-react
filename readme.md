@@ -29,7 +29,7 @@ See the demo live: [Link](https://savvyopen.github.io/so-gloper-react/)
 
 * **Lazy Load for Base State** — Base states assigned with Async/Sync functions are lazily loaded on first use (ideal for heavy instructions).
 
-* **Multi-level get and set (upcoming) - will support derived states and other advanced patterns.
+* **Multi-level get and set** (upcoming) - will support derived states and other advanced patterns.
 
 * **Auto Immutable Update** — Support Object and Array within React component and it is designed to be off in programmatic API for typical dataflow
 
@@ -108,7 +108,7 @@ export const cryptoStore = {
 ```ts
 // main.tsx
 
-import './cryptoStore.ts';
+import 'cryptoStore' from './cryptoStore.ts';
 ```
 
 * Consume state anywhere without worrying about initialization order:
