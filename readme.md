@@ -70,10 +70,13 @@ npm install so-gloper-react
 // Typically in main.tsx, or cautiously in App.tsx
 
 import { createGloper } from 'so-gloper-react';
+
 createGloper('auth_token', { state: '123', persist: true });
 ```
 
 ```ts
+// In any component file(s)
+
 import { useGloper } from 'so-gloper-react';
 
 function MyComponent() {
@@ -104,6 +107,8 @@ export const cryptoStore = {
 * Consume state anywhere without worrying about initialization order:
 
 ```ts
+// In any component file(s)
+
 import { cryptoStore } from './cryptoStore.ts';
 import { useGloper } from 'so-gloper-react';
 
