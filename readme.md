@@ -17,7 +17,7 @@ See the demo app using it live: [Link](https://savvyopen.github.io/so-gloper-rea
   * Uses grouping and name conflicts detection during state creations
   
   * In Relax Mode: string literal keys in snake_case (`'group_name'` or `'group_subgroup_name'`) with optional multi-level subgroups.
-  * In Control Mode (upcoming): symbolic references for maximum IDE support for autocomplete, refactoring & renaming safety, tree-shaking and more.
+  * In Control Mode (upcoming): symbolic references for maximum IDE support for autocomplete, refactoring & renaming safety and more.
 
 * **Programmatic API** — Useful for programmatic controls and debugging: `get()`, `set()`, `list()`, `reset()`, `remove()`.
 
@@ -51,10 +51,11 @@ npm install so-gloper-react
 
   * This can be defined in `non-store style` for quick setup and/or in `store style` for semi IDE support
   
-    > For a quick setup, it is typically done in main.tsx, but can be done at your discretion in App.tsx for simplicity
+    > For quick setup: Directly declare all `createGloper` calls in `main.tsx`.
 
-    > For semi IDE support, declare all `createGloper` as properties within an object literal in a separate file (e.g. store.ts).
-	    * Requires importation of the store files to any components using them
+    > For semi IDE support: Declare all `createGloper` calls as properties within an object literal in a separate file (e.g., store.ts).
+		* Import the store file in main.tsx for side effects: import './store.ts' in main.tsx
+	    * Import the store file in any component that uses it to access the exported states
 
 * Access it in any component: const [token, setToken] = useGloper('auth_token');
 * Access it programmatically: e.g. SoGloper.get('auth_token');
@@ -63,10 +64,10 @@ npm install so-gloper-react
 
 ---
 
-### Relax Mode - Non-Store Example (For Quick Setup)
+## 📝 Relax Mode - Non-Store Example (For Quick Setup)
 
 ```ts
-// Typically in main.tsx, or cautiously in App.tsx
+// In main.tsx (mandatory for stability)
 
 import { createGloper } from 'so-gloper-react';
 
@@ -98,9 +99,19 @@ import { createGloper } from 'so-gloper-react';
 
 export const cryptoStore = {
 
-  crypto_comment: createGloper('crypto_comment', { state: '' }),	// *** It is preferred the object property name and the string key name to match
+  // *** It is preferred the object property name and the string key name to match
+	
+  crypto_comment: createGloper('crypto_comment', { state: '' }),
   crypto_data: createGloper('crypto_data', { state: '' }),
 };
+```
+
+* Import stores in main entry point:
+
+```ts
+// In main.tsx (mandatory for stability)
+
+import './cryptoStore.ts'
 ```
 
 * Consume state anywhere without worrying about initialization order:
@@ -117,6 +128,29 @@ function MyComponent() {
   ...
 }
 ```
+
+---
+
+## SoGloper Configurator (Optional)
+
+* This is only allowed once per runtime for overall system stability.
+* Given the default behavior, using this configurator is optional.
+
+```ts
+
+// In main.tsx (mandatory for stability)
+
+import {SoGloper} from 'so-gloper-react';
+
+SoGloper.configure({
+
+	persistStorage: 'localStorage',		// default = localStorage; advanced = indexedDB (supports images, audio, videos and more)
+	autoImmutableUpdate: true,			// default = true (supports Object and Array only)
+	consoleDebug: true					// default = false (provides SoGloper.xxx programmatic API methods in the developer console)
+});
+
+```
+
 ---
 
 ## 🛠 Programmatic API
@@ -127,15 +161,6 @@ function MyComponent() {
 * `reset(snake_name, {withValue: x})`
 * `resetAll({withValue: x})`
 * `group(groupName, {excludeSubGroups: true/false})`	Default is false
-
-```ts
-import { SoGloper } from 'so-gloper-react';
-
-// Setup in main.tsx or App.tsx for using programmatic API in developer console
-
-SoGloper.configure({consoleDebug: true});
-```
-
 
 ---
 
