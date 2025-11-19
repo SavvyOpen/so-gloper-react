@@ -54,7 +54,7 @@ npm install so-gloper-react
     > For quick setup: Directly declare all `createGloper` calls in `main.tsx`.
 
     > For semi IDE support: Declare all `createGloper` calls as properties within an object literal in a separate file (e.g., store.ts).
-		* Import the store file in main.tsx for side effects: import './store.ts' in main.tsx
+		* Import the store file in main.tsx for side effects: import './store.ts'
 	    * Import the store file in any component that uses it to access the exported states
 
 * Access it in any component: const [token, setToken] = useGloper('auth_token');
@@ -195,5 +195,6 @@ SoGloper.configure({
 * ✅ **Alpha** — Core API stable, demo fully functional
 * 🧪 **Exploration** — Developer-friendly debugging tools
 * 🔬 **Future** — Full Control Mode with symbolic references, IDE ergonomics, and advanced state flows
+
 
 ---
