@@ -1,8 +1,6 @@
-# 🧩 SoGloper 0.8.0-alpha (so-gloper-react) — Library
+**SoGloper** 0.8.0-alpha is a unified React library for state, logic and dataflow. It provides **minimal boilerplate**, **flexible dual operation modes**, **clean namespacing control**, **optional namespace-integrated persistence** and much more.
 
-**SoGloper** is a dataflow engine and global state management library that provides **minimal boilerplate**, **flexible dual operation modes**, **clean namespacing control**, **optional namespace-integrated persistence** and much more.
-
-See the demo live: [Link](https://savvyopen.github.io/so-gloper-react/)
+See the demo app using it live: [Link](https://savvyopen.github.io/so-gloper-react/)
 ---
 
 ## 🚀 Key Features
@@ -101,14 +99,6 @@ export const cryptoStore = {
   crypto_comment: createGloper('crypto_comment', { state: '' }),	// *** It is preferred the object property name and the string key name to match
   crypto_data: createGloper('crypto_data', { state: '' }),
 };
-```
-
-* Import stores in main entry point:
-
-```ts
-// main.tsx
-
-import { cryptoStore } from './cryptoStore.ts';
 ```
 
 * Consume state anywhere without worrying about initialization order:
